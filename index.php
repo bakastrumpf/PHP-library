@@ -31,16 +31,16 @@
                 </div>
 
                 <div class="title">
-                    <h1>Welcome to our library!
-                    </h1>
+                    <h1>Welcome to our library!</h1>
                     <p>So glad to have you here. What would you like to do next?</p>
                     <hr>
-                    <p>Browse for books</p>
-                    <p>Login</p>
-                    <p>Register</p>
+                    <a href="search.php">Browse for books</a>
+                    <br>
+                    <a href="login.php">Login</a>
+                    <br>
+                    <a href="register.php">Register</a>
                 </div>
             </div>
-
         </header>
 
         <div>

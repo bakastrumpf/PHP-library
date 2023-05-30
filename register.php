@@ -1,4 +1,95 @@
+<!DOCTYPE html>
 <?php include('header.php'); ?>
+
+<?php
+$userType = [
+    'reader' => 'reader',
+    'librarian' => 'librarian',
+    'admin' => 'admin',
+];
+
+$godine = [
+    '1' => '1990',
+    '2' => '1991',
+    '3' => '1992',
+    '4' => '1993',
+    '5' => '1994',
+    '6' => '1995'
+];
+
+define(
+    'MESECI',
+    [
+        'јануар',
+        'фебруар',
+        'март',
+        'април',
+        'мај',
+        'јун',
+        'јул',
+        'август',
+        'септембар',
+        'октобар',
+        'новембар',
+        'децембар'
+    ]
+);
+
+?>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5" />
+    <meta name="author" content="MS" />
+    <meta name="description" content="PHP: Library" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Library: User registration</title>
+</head>
+
+<body>
+
+    <fieldset style="width: 400px;">
+        <form name="registration" method="POST" action="primer4205registracija.php">
+            Name:
+            <br>
+            <input type="text" name="name" required>
+            <br>
+            Last name:
+            <br>
+            <input type="text" name="lastName" required>
+            <br>
+            Email address (to be used as your username):
+            <br>
+            <input type="email" name="email" required>
+            <br>
+            Password:
+            <br>
+            <input type="text" name="password" required>
+            <br>
+            Repeated password:
+            <br>
+            <input type="text" name="repPassword" required>
+            <br>
+            Address:
+            <br>
+            <input type="text" name="address" required>
+            <br>
+            Phone number:
+            <br>
+            <input type="text" name="phone" required>
+            <br>
+            <br>
+            <input type="submit" name="posalji" value="Submit">
+        </form>
+
+    </fieldset>
+
+</body>
+
+</html>
 
 
 <?php include('footer.php'); ?>
