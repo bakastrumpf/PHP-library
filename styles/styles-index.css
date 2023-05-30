@@ -3,6 +3,12 @@ body {
     background-image: url("../images/PHP-LIB-bgr.jpg");
 }
 
+.title {
+    position: sticky;
+    color: beige;
+    font-weight: bold;
+}
+
 .topMenu {
     overflow: hidden;
     width: 100%;
