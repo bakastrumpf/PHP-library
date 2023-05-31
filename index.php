@@ -22,13 +22,7 @@
 
         <header>
             <div id="header">
-                <div class="topMenu">
-                    <a href="index.php">Home page</a> |
-                    <a href="news.php">News</a> |
-                    <a href="search.php">Book search</a> |
-                    <a href="contact.php">Contact</a> |
-                    <a href="login.php">Login</a>
-                </div>
+                <?php include('header.php'); ?>
 
                 <div class="title">
                     <h1>Welcome to our library!</h1>
@@ -44,17 +38,14 @@
         </header>
 
         <div>
-
         </div>
 
         <div>
-
         </div>
 
         <footer>
-
+            <?php include('footer.php'); ?>
         </footer>
-
 
     </div>
 

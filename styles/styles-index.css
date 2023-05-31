@@ -4,6 +4,7 @@ body {
 }
 
 .title {
+    text-indent: 0fr;
     position: sticky;
     color: beige;
     font-weight: bold;
@@ -42,4 +43,8 @@ a {
 .topMenu a:active,
 a:active {
     color: rgb(156, 222, 243);
+}
+
+#footerText {
+    color: rgb(251, 228, 253);
 }
