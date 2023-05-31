@@ -19,7 +19,7 @@ if ($msg != "") {
     exit();
 }
 
-include_once('primer5110config.inc.php');
+include_once('config.inc.php');
 
 if ($user_type == 1) {
     $sql = "select * from korisnik where userkor = '$user'";
