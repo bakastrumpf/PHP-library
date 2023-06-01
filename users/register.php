@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include('header.php'); ?>
+<?php include('../config/header.php'); ?>
 
 <html lang="en">
 
@@ -57,4 +57,4 @@
 </html>
 
 
-<?php include('footer.php'); ?>
+<?php include('../config/footer.php'); ?>
