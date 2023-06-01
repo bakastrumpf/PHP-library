@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+/*
 $user = $_POST['username'];
 $pass = $_POST['password'];
 $user_type = $_POST['user_type'];
@@ -58,3 +59,4 @@ if (mysqli_num_rows($result) > 0) {
     header("Location:index.php");
     exit();
 }
+*/
