@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include('../config/header.php'); ?>
+<?php include('header.php'); ?>
 
 <html lang="en">
 
@@ -17,7 +17,7 @@
 <body>
 
     <fieldset style="width: 400px;">
-        <form name="registration" method="POST" action="primer4205registracija.php">
+        <form name="registration" method="POST" action="register.php">
             Name:
             <br>
             <input type="text" name="name" required>
@@ -57,4 +57,4 @@
 </html>
 
 
-<?php include('../config/footer.php'); ?>
+<?php include('footer.php'); ?>

@@ -24,17 +24,17 @@
 
         <header>
             <div id="header">
-                <?php include('config/header.php'); ?>
+                <?php include('header.php'); ?>
 
                 <div class="title">
                     <h1>Welcome to our library!</h1>
                     <p>So glad to have you here. What would you like to do next?</p>
                     <hr>
-                    <a href="pages/search.php">Browse for books</a>
+                    <a href="search.php">Browse for books</a>
                     <br>
-                    <a href="users/login.php">Login</a>
+                    <a href="login.php">Login</a>
                     <br>
-                    <a href="users/register.php">Register</a>
+                    <a href="register.php">Register</a>
                 </div>
             </div>
         </header>
@@ -46,7 +46,7 @@
         </div>
 
         <footer>
-            <?php include('config/footer.php'); ?>
+            <?php include('footer.php'); ?>
         </footer>
 
     </div>
