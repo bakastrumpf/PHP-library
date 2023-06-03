@@ -24,7 +24,6 @@
 
         <header>
             <div id="header">
-                <?php include('header.php'); ?>
 
                 <div class="title">
                     <h1>Welcome to our library!</h1>
