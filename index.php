@@ -32,6 +32,8 @@
                     <hr>
                     <a href="search.php">Browse for books</a>
                     <br>
+                    <a href="news.php">Read news</a>
+                    <br>
                     <a href="login.php">Login</a>
                     <br>
                     <a href="register.php">Register</a>

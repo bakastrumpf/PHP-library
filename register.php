@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles/styles-index.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-header.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-footer.css">
-    <title>#Library: User registration</title>
+    <title>Library: User registration</title>
 </head>
 
 <body>
@@ -49,7 +49,7 @@
             <input type="text" name="phone" required>
             <br>
             <br>
-            <input type="submit" name="posalji" value="Submit">
+            <input type="submit" name="submit" value="Submit">
         </form>
 
     </fieldset>
