@@ -1,3 +1,7 @@
-<?php include('header.php'); ?>
+    <link rel="stylesheet" type="text/css" href="styles/styles-index.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles-header.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles-footer.css">
 
-<?php include('footer.php'); ?>
+    <?php include('header.php'); ?>
+
+    <?php include('footer.php'); ?>
