@@ -7,15 +7,26 @@ session_start(); ?>
 
 <?php include('header.php'); ?>
 
+<form action="login.php" method="post">
+    <h2>LOGIN</h2>
+        <?php if (isset($_GET['error'])) { ?>
+            <p class="error"><?php echo $_GET['error']; ?></p>
+        <?php } ?>
+        <label>Email: </label>
+        <input type="text" name="uname" placeholder="User Name"><br>
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Password"><br> 
+        <button type="submit">Login</button>
+</form>
 
-/*
-$user = $_POST['username'];
-$pass = $_POST['password'];
-$user_type = $_POST['user_type'];
+<?php 
+$user = $_POST['USERemail'];
+$pass = $_POST['USERpass'];
+$user_role = $_POST['USERrole'];
 
 $msg = "";
 if (empty($user))
-$msg .= "Username is mandatory. <br />";
+$msg .= "Login email is mandatory. <br />";
 if (empty($pass))
 $msg .= "Password is mandatory. <br />";
 if (empty($user_type))
@@ -29,43 +40,55 @@ exit();
 
 include_once('config.inc.php');
 
-if ($user_type == 1) {
-$sql = "select * from korisnik where userkor = '$user'";
-} else {
-$sql = "select * from kompanija where userkomp = '$user'";
-}
+if ($user_role == 1) {
+    $sql = "select * from USER where USERrole = '$user'";
+        } else { 
+            if ($user_role == 2) 
+                $sql = "select * from USER where USERrole = '$user'";
+        } else {
+            if ($user_role == 3)
+                $sql = "select * from USER where USERrole = '$user'";
+        } else {
+            $_SESSION['msg'] = "Wrong data.";
+            header("Location:index.php");
+            exit();
+    }
 
 $result = mysqli_query($conn, $sql)
 or die("Error: " . mysqli_error($conn));
 
 if (mysqli_num_rows($result) > 0) {
-// pronadjen user sa zadatim korisničkim imenom
+// user found
 $user_db = mysqli_fetch_assoc($result);
-if ($user_db['pass'] == $pass) {
-$_SESSION['user'] = $user;
-$_SESSION['user_type'] = $user_type;
-if ($user_type == 1) {
-$_SESSION['osoba'] = $user_db['ime'] . " " . $user_db['prezime'];
-$_SESSION['eposta'] = $user_db['eposta'];
-header("Location:primer5103korisnik.php");
+if ($user_db['USERpass'] == $pass) {
+$_SESSION['USERemail'] = $user;
+$_SESSION['USERrole'] = $user_role;
+if ($user_role == 1) {
+$_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
+$_SESSION['USERemail'] = $user_db['USERemail'];
+header("Location:admin.php");
 exit();
-} else {
-$_SESSION['naziv'] = $user_db['naziv'];
-$_SESSION['adresa'] = $user_db['adresa'];
-header("Location:kompanija/primer5104komp.php");
+}
+if ($user_role == 2) {
+$_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
+$_SESSION['USERemail'] = $user_db['USERemail'];
+header("Location:librarian.php");
+exit();
+}
+if ($user_role == 3) {
+$_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
+$_SESSION['USERemail'] = $user_db['USERemail'];
+header("Location:member.php");
 exit();
 }
 } else {
-$_SESSION['user'] = $user;
-$_SESSION['msg'] = "Wrong password.";
+$_SESSION['msg'] = "Wrong user data.";
 header("Location:index.php");
 exit();
 }
-} else {
-$_SESSION['msg'] = "Wrong username.";
-header("Location:index.php");
-exit();
+
 }
-*/
+?>
+
 
 <?php include('footer.php'); ?>
