@@ -2,7 +2,7 @@
 -- недеља, 04. јун 2023. 20:42:07 CEST
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
--- manual DB setup with initial data via INSERT command
+-- manual DB setup with fictitious initial data via INSERT command
 -- author: Marija Savić @ ETF PHP course 2023
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
