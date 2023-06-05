@@ -33,6 +33,16 @@
             <input type="password" name="password" placeholder="Password">
             <br>
             <br>
+            <label>User role:</label>
+            <br>
+            <select name="user_role">
+                <option></option>
+                <option>ADMIN</option>
+                <option>LIBRARIAN</option>
+                <option>MEMBER</option>
+            </select>
+            <br>
+            <br>
             <button type="submit">Login</button>
         </form>
     </fieldset>

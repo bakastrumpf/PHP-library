@@ -11,8 +11,8 @@ if (empty($user))
     $msg .= "Login email is mandatory. <br />";
 if (empty($pass))
     $msg .= "Password is mandatory. <br />";
-if (empty($user_type))
-    $msg .= "User type is mandatory. <br />";
+if (empty($user_role))
+    $msg .= "User role is mandatory. <br />";
 
 if ($msg != "") {
     $_SESSION['msg'] = $msg;
@@ -22,13 +22,13 @@ if ($msg != "") {
 
 include_once('config.inc.php');
 
-if ($user_type == 1) {
+if ($user_role == 1) {
     $sql = "select * from USER where USERrole = '$user'";
 } else {
-    if ($user_type == 2) {
+    if ($user_role == 2) {
         $sql = "select * from USER where USERrole = '$user'";
     } else {
-        if ($user_type == 3) {
+        if ($user_role == 3) {
             $sql = "select * from USER where USERrole = '$user'";
         } else {
             $_SESSION['msg'] = "Wrong user data.";
