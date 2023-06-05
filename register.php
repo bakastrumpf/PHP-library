@@ -20,6 +20,8 @@
 
     <fieldset style="width: 400px;">
         <form name="registration" method="POST" action="register.php">
+            <caption>REGISTRATION FORM</caption>
+            <br>
             Name:
             <br>
             <input type="text" name="name" required>
