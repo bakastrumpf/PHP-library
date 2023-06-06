@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!empty($_SESSION['msg']))
     echo "<span style='color:red'>" . $_SESSION['msg'] . "</span>";
 
@@ -23,13 +24,13 @@ if ($msg != "") {
 include_once('config.inc.php');
 
 if ($user_role == 1) {
-    $sql = "select * from USER where USERrole = '$user'";
+    $sql = "select * from USER where USERemail = '$user'";
 } else {
     if ($user_role == 2) {
-        $sql = "select * from USER where USERrole = '$user'";
+        $sql = "select * from USER where USERemail = '$user'";
     } else {
         if ($user_role == 3) {
-            $sql = "select * from USER where USERrole = '$user'";
+            $sql = "select * from USER where USERemail = '$user'";
         } else {
             $_SESSION['msg'] = "Wrong user data.";
             header("Location:index.php");
