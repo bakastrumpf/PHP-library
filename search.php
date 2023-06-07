@@ -22,6 +22,17 @@
             <h3>SEARCH BOOKS</h3>
             <hr>
             <form name="search" id="search" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                I am looking for:
+                <input type="text" name="search" size="20" placeholder="What book are you interested in?" value="<?php if (isset($_GET['book'])) echo $_GET['book']; ?>" />
+                Sort:
+                <select name="redosled">
+                    <option>descending</option>
+                    <option>ascending</option>
+                    <option selected>nevermind</option>
+                </select>
+                <br>
+                <hr>
+
 
                 <input type="submit" name="confirm" value="PRETRAŽI">
             </form>

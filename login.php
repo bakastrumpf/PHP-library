@@ -9,7 +9,7 @@ $user_role = $_POST['USERrole'];
 
 $msg = "";
 if (empty($user))
-    $msg .= "Login email is mandatory. <br />";
+    $msg .= "Email is mandatory. <br />";
 if (empty($pass))
     $msg .= "Password is mandatory. <br />";
 if (empty($user_role))
