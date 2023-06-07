@@ -72,6 +72,8 @@
                 echo "<table border='5'>";
                 echo "<tr>";
                 echo "<th>Title</th>";
+                echo "<th>Author surname</th>";
+                echo "<th>Author name</th>";
                 echo "<th>Year</th>";
                 echo "<th>Publisher</th>";
                 echo "<th>Nr of pages</th>";
@@ -83,6 +85,8 @@
                     echo "<tr>";
                     echo "<td>{$row['Title']}</td>";
                     echo "<td>{$row['Year']}</td>";
+                    echo "<td>{$row['Author surname']}</td>";
+                    echo "<td>{$row['Author name']}</td>";
                     echo "<td>{$row['Publisher']}</td>";
                     echo "<td>{$row['Nr of pages']}</td>";
                     echo "<td>{$row['Genre']}</td>";
