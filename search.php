@@ -23,8 +23,10 @@
             <hr>
             <form name="search" id="search" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                 I am looking for:
-                <input type="text" name="search" size="20" placeholder="What book are you interested in?" value="<?php if (isset($_GET['book'])) echo $_GET['book']; ?>" />
-                Sort:
+                <input type="text" name="search" size="30" placeholder="book title" value="<?php if (isset($_GET['book'])) echo $_GET['book']; ?>" />
+                <br>
+                <br>
+                Results sorted:
                 <select name="sort">
                     <option>descending</option>
                     <option>ascending</option>
