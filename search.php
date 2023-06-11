@@ -98,7 +98,7 @@
                 }
                 echo "</table>";
             } else {
-                echo "<br> No results. <br> Please, try again with different data.";
+                echo "<br> No results fetched. <br> Please, try again with different data.";
             }
             mysqli_free_result($result);
             mysqli_close($conn);

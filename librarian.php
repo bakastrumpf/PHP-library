@@ -15,3 +15,5 @@ if ($_SESSION['user_role'] == 3) {
 ?>
 
 <?php include('header.php'); ?>
+
+<?php include('footer.php'); ?>
