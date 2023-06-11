@@ -28,9 +28,8 @@
                 <br>
                 Results sorted:
                 <select name="sort">
+                    <option selected>ascending</option>
                     <option>descending</option>
-                    <option>ascending</option>
-                    <option selected>nevermind</option>
                 </select>
                 <br>
                 <hr>
