@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="styles/styles-index.css">
 <link rel="stylesheet" type="text/css" href="styles/styles-header.css">
 <link rel="stylesheet" type="text/css" href="styles/styles-footer.css">
+<link rel="stylesheet" type="text/css" href="styles/styles-contact.css">
 
 <?php include('header.php'); ?>
 
