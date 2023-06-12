@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles/styles-index.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-header.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-footer.css">
+    <script src="register-script.js"></script>
     <title>Library: User registration</title>
 </head>
 
