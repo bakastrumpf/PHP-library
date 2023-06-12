@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('header.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +19,7 @@
 </head>
 
 <body>
-    <?php include('header.php'); ?>
+
 
     <div>
         <fieldset style="width: 450px;">
@@ -23,7 +27,7 @@
             <hr>
             <form name="search" id="search" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                 I am looking for:
-                <input type="text" name="search" size="30" placeholder="book title" value="<?php if (isset($_GET['book'])) echo $_GET['book']; ?>" />
+                <input type="text" name="title" size="30" placeholder="book title" value="<?php if (isset($_GET['title'])) echo $_GET['title']; ?>" />
                 <br>
                 <br>
                 Results sorted:
@@ -33,8 +37,6 @@
                 </select>
                 <br>
                 <hr>
-
-
                 <input type="submit" name="confirm" value="SEARCH">
             </form>
         </fieldset>
@@ -43,10 +45,10 @@
         <?php
         if (isset($_GET['confirm'])) {
             echo "<br>Search results: <br>";
-
+            echo "PROBA 1";
             // search criteria
-            $books = $_GET['BOOK'];
-            $authors = $_GET['AUTHOR'];
+            $books = $_GET['title'];
+            // $authors = $_GET['AUTHOR'];
             $sort = $_GET['sort'];
 
             // include DB
@@ -55,21 +57,20 @@
             $query = "SELECT BOOKtitle, AUTHORname, AUTHORsurname, BOOKyear, BOOKpublisher, BOOKpages, BOOKgenre, BOOKtoBorrow from BOOK b, WRITTEN w, AUTHOR a WHERE b.idBOOK = w.BOOK_idBOOK AND a.idAUTHOR = w.AUTHOR_idAUTHOR";
 
             if ($books != "") {
-                $query .= " AND BOOK like '%$books'"; // partial title match
+                $query .= " AND BOOKtitle like '%$books'"; // partial title match
             }
-
+            echo "PROBA 2";
             // alphabet sorting
             if ($sort == 'ascending')
                 $query .= " ORDER BY BOOKtitle ASC";
             elseif ($_GET['sort'] == 'descending')
                 $query .= " ORDER BY BOOKtitle DESC";
 
-            $result = mysqli_query($conn, $upit)
+            $result = mysqli_query($conn, $query)
                 or die("Unexpected error: " . mysqli_error($conn));
 
             if (mysqli_num_rows($result) > 0) {
                 // results render
-
                 echo "<table border='5'>";
                 echo "<tr>";
                 echo "<th>Title</th>";
