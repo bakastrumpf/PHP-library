@@ -4,7 +4,7 @@
 
 <?php include('header.php'); ?>
 
-<script src="script.js"></script>
+<script src="-contact-script.js"></script>
 
 <div id="centar">
     <div id="contactForm">
@@ -17,11 +17,6 @@
             <label for="email">Email address:</label>
             <br>
             <input type="text" id="email" name="email" placeholder="real email address">
-            <br>
-            <br>
-            <label for="telefon">Phone number:</label>
-            <br>
-            <input type="text" id="phone" name="phone" placeholder="+3816х-хххх-ххх">
             <br>
             <br>
             <label for="comment">Your message:</label>
