@@ -4,7 +4,7 @@
 
 <?php include('header.php'); ?>
 
-<script src="-contact-script.js"></script>
+<script src="contact-script.js"></script>
 
 <div id="centar">
     <div id="contactForm">
@@ -24,7 +24,7 @@
             <textarea id="comment" name="comment" rows="15" cols="75" placeholder="Your message"></textarea>
             <br>
             <br>
-            <input onclick="proveriPodatke()" type="button" name="check" id="btnForm" value="SUBMIT">
+            <input onclick="checkData()" type="button" name="check" id="btnForm" value="SUBMIT">
         </form>
         <div id="message"></div>
     </div>

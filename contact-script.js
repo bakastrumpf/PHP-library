@@ -20,7 +20,7 @@ function checkData() {
     if (!checkName())
         message += "Please, insert name. ";
     if (!checkEmail())
-        message += "Please, insert email address. ";
+        message += "Please, insert a valid email address. ";
     if (message == "")
         message = "Congrats! Your message has been successfully sent. ";
     document.getElementById("comment").innerHTML = message;
