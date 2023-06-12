@@ -35,6 +35,11 @@
             <br>
             <input type="email" name="email" required>
             <br>
+            <!--
+            to see password and repeated password: 
+            type="text" instead type="password"
+            return to the correct one once the app is complete
+            -->
             Password:
             <br>
             <input type="text" name="password" required>
@@ -54,12 +59,9 @@
             <br>
             <input type="submit" name="submit" value="Submit">
         </form>
-
     </fieldset>
-
 </body>
 
 </html>
-
 
 <?php include('footer.php'); ?>
