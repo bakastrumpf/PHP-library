@@ -24,30 +24,21 @@
                 <p class="error"><?php echo $_GET['error']; ?></p>
             <?php } ?>
             <br>
-            <label>Email: </label>
-            <br>
-            <input type="text" name="uname" placeholder="Your email address">
-            <br>
-            <label>Password:</label>
-            <br>
-            <input type="password" name="password" placeholder="Password">
-            <br>
-            <br>
-            <label>User role:</label>
-            <br>
+            <label>Email: </label><br>
+            <input type="text" name="uname" placeholder="Your email address"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password" placeholder="Password"><br><br>
+            <label>User role:</label><br>
             <select name="user_role">
                 <option></option>
                 <option>ADMIN</option>
                 <option>LIBRARIAN</option>
                 <option>MEMBER</option>
-            </select>
-            <br>
-            <br>
+            </select><br><br>
             <button type="submit">Login</button>
         </form>
     </fieldset>
 </body>
 
 </html>
-
 <?php include('footer.php'); ?>
