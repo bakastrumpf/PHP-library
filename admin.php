@@ -33,6 +33,22 @@ if ($_SESSION['user_role'] == 3) {
 </head>
 
 <body>
+    <div id="admin-wrapper">
+        Welcome, <?= $_SESSION['person'] ?>
+        <br>
+        You are logged in as: <?= $_SESSION['USERemail'] ?>
+        <br>
+        <div style="float:right">
+            <a href="logout.php">LOGOUT</a>
+        </div>
+        <p>I want:</p>
+        <hr>
+        <a href="user-management.php">User management</a>
+        <br>
+        <a href="book-management.php">Book management</a>
+        <br>
+        <a href="account-settings.php">Settings</a>
+    </div>
 
 </body>
 
