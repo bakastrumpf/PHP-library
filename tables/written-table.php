@@ -31,7 +31,6 @@ class Written
         return $this->author_id;
     }
 
-
     function __toString()
     {
         return $this->book_id . " " . $this->author_id . " ";
