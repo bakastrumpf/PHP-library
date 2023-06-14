@@ -68,7 +68,7 @@ if (mysqli_num_rows($result) > 0) {
         }
     } else {
         $_SESSION['msg'] = "Wrong user data.";
-        header("Location:index.php");
+        header("Location:index.php?error");
         exit();
     }
 }
