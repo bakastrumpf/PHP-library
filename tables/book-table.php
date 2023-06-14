@@ -2,7 +2,7 @@
 
 class User
 {
-    var $id;
+    var $book_id;
     var $title;
     var $year;
     var $publisher;
@@ -15,9 +15,9 @@ class User
     var $nrCopies;
     var $isAvailable;
 
-    public function __construct($id, $title, $year, $publisher, $nrPages, $isbn, $descr, $img, $genre, $isToBorrow, $nrCopies, $isAvailable = null)
+    public function __construct($book_id, $title, $year, $publisher, $nrPages, $isbn, $descr, $img, $genre, $isToBorrow, $nrCopies, $isAvailable = null)
     {
-        $this->id = $id;
+        $this->book_id = $book_id;
         $this->title = $title;
         $this->year = $year;
         $this->publisher = $publisher;
@@ -31,9 +31,9 @@ class User
         $this->isAvailable = $isAvailable;
     }
 
-    public function setId($id)
+    public function setBookId($book_id)
     {
-        $this->id = $id;
+        $this->book_id = $book_id;
     }
 
     function setTitle($new_title)
@@ -138,6 +138,6 @@ class User
 
     function __toString()
     {
-        return $this->id . " " . $this->title . " " . $this->year . " " . $this->publisher . " " . $this->nrPages . " " . $this->isbn . " " . $this->descr . " " . $this->img . " " . $this->genre . " " . $this->isToBorrow . " " . $this->nrCopies . " " . $this->isAvailable;
+        return $this->book_id . " " . $this->title . " " . $this->year . " " . $this->publisher . " " . $this->nrPages . " " . $this->isbn . " " . $this->descr . " " . $this->img . " " . $this->genre . " " . $this->isToBorrow . " " . $this->nrCopies . " " . $this->isAvailable;
     }
 }
