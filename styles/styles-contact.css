@@ -10,7 +10,7 @@
 textarea,
 input {
     outline-color: blue;
-    border: 2px solid aqua;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 5px;
 }
 
