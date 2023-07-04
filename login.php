@@ -3,9 +3,13 @@ session_start();
 if (!empty($_SESSION['msg']))
     echo "<span style='color:red'>" . $_SESSION['msg'] . "</span>";
 
+include_once('login-form.php');
+
 $user = $_POST['USERemail'];
 $pass = $_POST['USERpass'];
 $user_role = $_POST['USERrole'];
+
+var_dump($user);
 
 $msg = "";
 if (empty($user))
@@ -15,21 +19,15 @@ if (empty($pass))
 if (empty($user_role))
     $msg .= "User role is mandatory. <br />";
 
-if ($msg != "") {
-    $_SESSION['msg'] = $msg;
-    header("Location:index.php");
-    exit();
-}
-
 include_once('config.inc.php');
 
-if ($user_role == 1) {
+if ($user_role == 'ADMIN') {
     $sql = "select * from USER where USERemail = '$user'";
 } else {
-    if ($user_role == 2) {
+    if ($user_role == 'LIBRARIAN') {
         $sql = "select * from USER where USERemail = '$user'";
     } else {
-        if ($user_role == 3) {
+        if ($user_role == 'MEMBER') {
             $sql = "select * from USER where USERemail = '$user'";
         } else {
             $_SESSION['msg'] = "Wrong user data.";
@@ -48,19 +46,19 @@ if (mysqli_num_rows($result) > 0) {
     if ($user_db['USERpass'] == $pass) {
         $_SESSION['USERemail'] = $user;
         $_SESSION['USERrole'] = $user_role;
-        if ($user_role == 1) {
+        if ($user_role == 'ADMIN') {
             $_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
             $_SESSION['USERemail'] = $user_db['USERemail'];
             header("Location:admin.php");
             exit();
         }
-        if ($user_role == 2) {
+        if ($user_role == 'LIBRARIAN') {
             $_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
             $_SESSION['USERemail'] = $user_db['USERemail'];
             header("Location:librarian.php");
             exit();
         }
-        if ($user_role == 3) {
+        if ($user_role == 'MEMBER') {
             $_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
             $_SESSION['USERemail'] = $user_db['USERemail'];
             header("Location:member.php");
