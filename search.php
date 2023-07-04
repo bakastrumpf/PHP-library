@@ -57,7 +57,7 @@ include('header.php'); ?>
             $query = "SELECT BOOKtitle, AUTHORname, AUTHORsurname, BOOKyear, BOOKpublisher, BOOKpages, BOOKgenre, BOOKtoBorrow from BOOK b, WRITTEN w, AUTHOR a WHERE b.idBOOK = w.BOOK_idBOOK AND a.idAUTHOR = w.AUTHOR_idAUTHOR";
 
             if ($books != "") {
-                $query .= " AND BOOKtitle like '%$books'"; // partial title match
+                $query .= " AND BOOKtitle like '%$books%'"; // partial title match
             }
             echo "PROBA 2";
             // alphabet sorting
@@ -85,15 +85,15 @@ include('header.php'); ?>
 
                 while ($row = mysqli_fetch_array($result)) {
                     echo "<tr>";
-                    echo "<td>{$row['Title']}</td>";
-                    echo "<td>{$row['Year']}</td>";
-                    echo "<td>{$row['Author surname']}</td>";
-                    echo "<td>{$row['Author name']}</td>";
-                    echo "<td>{$row['Publisher']}</td>";
-                    echo "<td>{$row['Nr of pages']}</td>";
-                    echo "<td>{$row['Genre']}</td>";
-                    echo "<td>{$row['Can be taken']}</td>";
-                    echo "<td><a href='[[[[[reservation.php]]]]]?id=" . $row['idRESERVATION'] . "'>RESERVATION</a></td>";
+                    echo "<td>{$row['BOOKtitle']}</td>";
+                    echo "<td>{$row['BOOKyear']}</td>";
+                    echo "<td>{$row['AUTHORsurname']}</td>";
+                    echo "<td>{$row['AUTHORname']}</td>";
+                    echo "<td>{$row['BOOKpublisher']}</td>";
+                    echo "<td>{$row['BOOKpages']}</td>";
+                    echo "<td>{$row['BOOKgenre']}</td>";
+                    echo "<td>{$row['BOOKtoBorrow']}</td>";
+                    echo "<td><a href='reservation.php?id=" . $row['idBOOK'] . "'>RESERVATION</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";

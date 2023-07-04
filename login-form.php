@@ -25,7 +25,7 @@
             <?php } ?>
             <br>
             <label>Email: </label><br>
-            <input type="text" name="uname" placeholder="Your email address"><br>
+            <input type="text" name="username" placeholder="Your email address"><br>
             <label>Password:</label><br>
             <input type="password" name="password" placeholder="Password"><br><br>
             <label>User role:</label><br>

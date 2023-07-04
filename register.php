@@ -62,6 +62,25 @@
     </fieldset>
 </body>
 
+<!--
+
+
+
+include_once('config.inc.php');
+;
+
+$sql = "INSERT INTO 
+USER (`USERname`, `USERsurname`, `USERpass`, `USERemail`, `USERstreet`, `USERcity`, `USERphone`, `USERrole`, USERactive, USERmembPaid)
+VALUES 
+($_POST['name'], $_POST['lastName'], $_POST['password'], $_POST['email'], $_POST['address'], $_POST['phone'], $_POST['NEW'], $_POST['NEW'], $_POST['NEW'], $_POST['NEW']),
+
+
+$result = mysqli_query($conn, $sql)
+    or die("Error: " . mysqli_error($conn));
+
+-->
+
 </html>
+
 
 <?php include('footer.php'); ?>

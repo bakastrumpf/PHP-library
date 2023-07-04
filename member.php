@@ -4,11 +4,11 @@ if (empty($_SESSION['user_role'])) {
     header("Location:index.php");
     exit();
 }
-if ($_SESSION['user_role'] == 1) {
+if ($_SESSION['user_role'] == 'ADMIN') {
     header("Location:admin.php");
     exit();
 }
-if ($_SESSION['user_role'] == 2) {
+if ($_SESSION['user_role'] == 'LIBRARIAN') {
     header("Location:librarian.php");
     exit();
 }
