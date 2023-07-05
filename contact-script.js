@@ -24,4 +24,5 @@ function checkData() {
     if (message == "")
         message = "Congrats! Your message has been successfully sent. ";
     document.getElementById("message").innerHTML = message;
+
 }

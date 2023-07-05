@@ -2,7 +2,7 @@ function checkName() {
     var name = document.getElementById("name").value;
     // alert("Hej");
     var reg = new RegExp("^[a-z]{3,20}$", "i");
-    var match = name.match;
+    var match = name.match(reg);
     return match != null;
 }
 
@@ -10,7 +10,7 @@ function checkLastName() {
     var name = document.getElementById("lastName").value;
     // alert("Hej");
     var reg = new RegExp("^[a-z]{3,20}$", "i");
-    var match = name.match;
+    var match = name.match(reg);
     return match != null;
 }
 
@@ -58,7 +58,7 @@ function checkAddress() {
     var address = document.getElementById("address").value;
     // alert("Address");
     var reg = new RegExp("^[a-z]{3,20}$", "i");
-    var match = address.match;
+    var match = address.match(reg);
     return match != null;
 }
 
@@ -74,16 +74,18 @@ function checkData() {
     if (!checkName())
         message += "Please, insert name. ";
     if (!checkLastName())
-        message += "Please, insert name. ";
+        message += "Please, insert last name. ";
     if (!checkEmail())
         message += "Please, insert email address. ";
     if (!checkPassword())
-        message += "Please, insert password. ";
+        message += "Passwords mismatch. Please, try again. ";
     if (!checkAddress())
         message += "Please, insert email address. ";
     if (!checkPhone())
         message += "Wrong phone format. ";
-    if (message == "")
+    if (message == "") {
         message = "Congrats! You have successfully registered. ";
+        /*document.forms['registration'].submit();*/
+    }
     document.getElementById("message").innerHTML = message;
 }

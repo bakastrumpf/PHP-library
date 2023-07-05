@@ -45,7 +45,7 @@ include('header.php'); ?>
         <?php
         if (isset($_GET['confirm'])) {
             echo "<br>Search results: <br>";
-            echo "PROBA 1";
+
             // search criteria
             $books = $_GET['title'];
             // $authors = $_GET['AUTHOR'];
@@ -54,12 +54,12 @@ include('header.php'); ?>
             // include DB
             include_once('config.inc.php');
 
-            $query = "SELECT BOOKtitle, AUTHORname, AUTHORsurname, BOOKyear, BOOKpublisher, BOOKpages, BOOKgenre, BOOKtoBorrow from BOOK b, WRITTEN w, AUTHOR a WHERE b.idBOOK = w.BOOK_idBOOK AND a.idAUTHOR = w.AUTHOR_idAUTHOR";
+            $query = "SELECT idBOOK, BOOKtitle, AUTHORname, AUTHORsurname, BOOKyear, BOOKpublisher, BOOKpages, BOOKgenre, BOOKtoBorrow from BOOK b, WRITTEN w, AUTHOR a WHERE b.idBOOK = w.BOOK_idBOOK AND a.idAUTHOR = w.AUTHOR_idAUTHOR";
 
             if ($books != "") {
                 $query .= " AND BOOKtitle like '%$books%'"; // partial title match
             }
-            echo "PROBA 2";
+
             // alphabet sorting
             if ($sort == 'ascending')
                 $query .= " ORDER BY BOOKtitle ASC";
@@ -100,6 +100,7 @@ include('header.php'); ?>
             } else {
                 echo "<br> No results fetched. <br> Please, try again with different data.";
             }
+            $_SESSION['$idBOOK'] = $row['idBOOK'];
             mysqli_free_result($result);
             mysqli_close($conn);
         }

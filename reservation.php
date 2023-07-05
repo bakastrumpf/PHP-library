@@ -7,23 +7,24 @@
 
     include('header.php');
 
-    echo ($row['idBOOK']);
+    echo ($_SESSION['idBOOK']);
 
+    include_once('config.inc.php');
 
+    $iduser = 7;
     /*
-    insert into reservation ( . . . )
-    values
-    (. . .)
-
-    INSERT INTO RESERVATION (RESisBooked, RESvalidity, USER_idUSER, BOOK_idBOOK)
-    VALUES (true, 2, $, 2), (true, 2, 7, 11), (true, 2, 13, 11), (true, 2, 12, 10);
-
+    $idBOOK = 9;
     */
+    $idBOOK = $_SESSION['idBOOK'];
 
-    ?>
+    echo ("PROBA");
 
+    $sql = "INSERT INTO 
+    RESERVATION (`RESisBooked`, `RESvalidity`, `USER_idUSER`, `BOOK_idBOOK`)
+    VALUES (TRUE, 2, '$iduser', '$idBOOK')";
 
+    echo ("PROBA 2");
+    $result = mysqli_query($conn, $sql)
+        or die("Error: " . mysqli_error($conn));
 
-
-
-    <?php include('footer.php'); ?>
+    include('footer.php'); ?>
