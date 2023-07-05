@@ -85,5 +85,5 @@ function checkData() {
         message += "Wrong phone format. ";
     if (message == "")
         message = "Congrats! You have successfully registered. ";
-    document.getElementById("comment").innerHTML = message;
+    document.getElementById("message").innerHTML = message;
 }

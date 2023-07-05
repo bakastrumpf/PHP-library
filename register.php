@@ -13,27 +13,27 @@
     <link rel="stylesheet" type="text/css" href="styles/styles-index.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-header.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-footer.css">
-    <script src="register-script.js"></script>
+
     <title>Library: User registration</title>
 </head>
 
 <body>
 
     <fieldset style="width: 400px;">
-        <form name="registration" method="POST" action="register.php">
+        <form name="registration" id="registration" method="POST" action="register.php">
             <caption>REGISTRATION FORM</caption>
             <br>
             Name:
             <br>
-            <input type="text" name="name" required>
+            <input type="text" name="name" id="name" required>
             <br>
             Last name:
             <br>
-            <input type="text" name="lastName" required>
+            <input type="text" name="lastName" id="lastName" required>
             <br>
             Email address (to be used as your username):
             <br>
-            <input type="email" name="email" required>
+            <input type="email" name="email" id="email" required>
             <br>
             <!--
             to see password and repeated password: 
@@ -42,43 +42,53 @@
             -->
             Password:
             <br>
-            <input type="text" name="password" required>
+            <input type="text" name="password" id="password" required>
             <br>
             Repeated password:
             <br>
-            <input type="text" name="repPassword" required>
+            <input type="text" name="repPassword" id="repPassword" required>
             <br>
             Address:
             <br>
-            <input type="text" name="address" required>
+            <input type="text" name="address" id="address" required>
+            <br>
+            City:
+            <br>
+            <input type="text" name="city" id="city" required>
             <br>
             Phone number:
             <br>
-            <input type="text" name="phone" required>
+            <input type="text" name="phone" id="phone" required>
             <br>
             <br>
-            <input type="submit" name="submit" value="Submit">
+            <button onclick="checkData()" type="button" name="registration" value="Submit">SUBMIT</button>
         </form>
     </fieldset>
+    <div id="message"></div>
+    <script src="register-script.js"></script>
 </body>
 
-<!--
 
-
-
+<?php
 include_once('config.inc.php');
-;
+
+$name = $_POST['name'];
+$surname = $_POST['lastName'];
+$password = $_POST['password'];
+$email = $_POST['email'];
+$address = $_POST['address'];
+$city = $_POST['city'];
+$phone = $_POST['phone'];
 
 $sql = "INSERT INTO 
 USER (`USERname`, `USERsurname`, `USERpass`, `USERemail`, `USERstreet`, `USERcity`, `USERphone`, `USERrole`, USERactive, USERmembPaid)
 VALUES 
-($_POST['name'], $_POST['lastName'], $_POST['password'], $_POST['email'], $_POST['address'], $_POST['phone'], $_POST['NEW'], $_POST['NEW'], $_POST['NEW'], $_POST['NEW']),
-
+('$name', '$surname', '$password', '$email', '$address', '$city', '$phone', 'MEMBER', TRUE, TRUE)";
 
 $result = mysqli_query($conn, $sql)
     or die("Error: " . mysqli_error($conn));
 
--->
+?>
 
 </html>
 
