@@ -23,5 +23,5 @@ function checkData() {
         message += "Please, insert a valid email address. ";
     if (message == "")
         message = "Congrats! Your message has been successfully sent. ";
-    document.getElementById("comment").innerHTML = message;
+    document.getElementById("message").innerHTML = message;
 }
