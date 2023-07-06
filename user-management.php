@@ -26,7 +26,7 @@ include('header.php');
             <h3>USER MANAGEMENT</h3>
             <hr>
             <form name="search" id="search" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                I am looking for USER:
+                I am looking for USER SURNAME:
                 <input type="text" name="surname" size="30" placeholder="type text" value="<?php if (isset($_GET['surname'])) echo $_GET['surname']; ?>" />
                 <br>
                 <br>
@@ -54,10 +54,10 @@ include('header.php');
             // include DB
             include_once('config.inc.php');
 
-            $query = "SELECT idUSER, USERname, USERsurname, USERpass, USERemail, USERstreet, USERcity, USERphone, USERrole, USERactive, USERmembPaid FROM USER";
+            $query = "SELECT idUSER, USERname, USERsurname, USERpass, USERemail, USERstreet, USERcity, USERphone, USERrole, USERactive, USERmembPaid FROM USER WHERE idUSER = idUSER ";
 
             if ($users != "") {
-                $query .= " AND USERsurname like '%$users%'"; // partial title match
+                $query .= " AND USERsurname like '%$users%'"; // partial surname match
             }
 
             // alphabet sorting
@@ -65,10 +65,10 @@ include('header.php');
                 $query .= " ORDER BY USERsurname ASC";
             elseif ($_GET['sort'] == 'descending')
                 $query .= " ORDER BY USERsurname DESC";
-            echo ("TEST TEST 1");
+
             $result = mysqli_query($conn, $query)
                 or die("Unexpected error: " . mysqli_error($conn));
-            echo ("TEST TEST 2");
+
             if (mysqli_num_rows($result) > 0) {
                 // results render
                 echo ("TEST TEST 3");
@@ -85,7 +85,7 @@ include('header.php');
                 echo "<th>Role</th>";
                 echo "<th>Is active</th>";
                 echo "<th>Membership paid</th>";
-                echo "<th>Modify</th>";
+                echo "<th>Settings</th>";
                 echo "<th>DELETE</th>";
                 echo "<tr>";
 
