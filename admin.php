@@ -22,7 +22,7 @@ if ($_SESSION['user_role'] == 'MEMBER') {
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5">
-    <meta name="author" content="DD | MS">
+    <meta name="author" content="MS">
     <meta name="description" content="PHP: PHP & MySQL">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@ if ($_SESSION['user_role'] == 'MEMBER') {
         <div style="float:right">
             <a href="logout.php">LOGOUT</a>
         </div>
-        <p>I want:</p>
+        <p>From this page you can proceed to:</p>
         <hr>
         <a href="user-management.php">User management</a>
         <br>
