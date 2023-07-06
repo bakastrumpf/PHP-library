@@ -4,15 +4,15 @@ if (empty($_SESSION['user_type'])) {
     header("Location:index.php");
     exit();
 }
-if ($_SESSION['user_type'] == 1) {
+if ($_SESSION['user_type'] == 'MEMBER') {
     header("Location:member.php");
     exit();
 }
-if ($_SESSION['user_type'] == 2) {
+if ($_SESSION['user_type'] == 'LIBRARIAN') {
     header("Location:librarian.php");
     exit();
 }
-if ($_SESSION['user_type'] == 2) {
+if ($_SESSION['user_type'] == 'ADMIN') {
     header("Location:admin.php");
     exit();
 }

@@ -12,9 +12,10 @@ if ($_SESSION['user_role'] == 'MEMBER') {
     header("Location:member.php");
     exit();
 }
-?>
 
-<?php include('header.php'); ?>
+include('header.php');
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

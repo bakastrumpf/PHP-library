@@ -20,7 +20,6 @@ include('header.php'); ?>
 
 <body>
 
-
     <div>
         <fieldset style="width: 450px;">
             <h3>SEARCH BOOKS</h3>

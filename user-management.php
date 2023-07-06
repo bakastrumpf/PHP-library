@@ -1,10 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <?php
 session_start();
 include('header.php');
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -54,7 +54,7 @@ include('header.php');
             // include DB
             include_once('config.inc.php');
 
-            $query = "SELECT * FROM USER;";
+            $query = "SELECT idUSER, USERname, USERsurname, USERpass, USERemail, USERstreet, USERcity, USERphone, USERrole, USERactive, USERmembPaid FROM USER";
 
             if ($users != "") {
                 $query .= " AND USERsurname like '%$users%'"; // partial title match
@@ -65,12 +65,13 @@ include('header.php');
                 $query .= " ORDER BY USERsurname ASC";
             elseif ($_GET['sort'] == 'descending')
                 $query .= " ORDER BY USERsurname DESC";
-
+            echo ("TEST TEST 1");
             $result = mysqli_query($conn, $query)
                 or die("Unexpected error: " . mysqli_error($conn));
-
+            echo ("TEST TEST 2");
             if (mysqli_num_rows($result) > 0) {
                 // results render
+                echo ("TEST TEST 3");
                 echo "<table border='5'>";
                 echo "<tr>";
                 echo "<th>User ID</th>";
@@ -118,7 +119,6 @@ include('header.php');
 
 </body>
 
-</html>
-
-
 <?php include('footer.php'); ?>
+
+</html>

@@ -4,7 +4,7 @@ body {
 }
 
 .title {
-    text-indent: 0fr;
+    text-indent: 1cm;
     position: sticky;
     color: beige;
     font-weight: bold;
