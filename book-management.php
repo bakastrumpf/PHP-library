@@ -218,11 +218,14 @@ include('header.php');
                 mysqli_query($conn, $query2)
                 or die("Error: " . mysqli_error($conn));
 
-            var_dump($resultbook[0]);
-            var_dump($resultauthor[0]);
+            $ra = mysqli_fetch_row($resultauthor);
+            $rb = mysqli_fetch_row($resultbook);
+
+            // var_dump($resultbook);
+            // var_dump($resultauthor[0]);
 
             $query3 = "INSERT INTO WRITTEN (BOOK_idBOOK, AUTHOR_idAUTHOR)
-                        VALUES ('$resultbook[0]', '$resultauthor[0]')";
+                        VALUES ('$rb[0]', '$ra[0]')";
 
             $resultwritten =
                 mysqli_query($conn, $query3)
