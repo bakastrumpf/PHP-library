@@ -1,6 +1,7 @@
 <?php
 session_start();
-include('header.php'); ?>
+include('header.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +52,7 @@ include('header.php'); ?>
             $sort = $_GET['sort'];
 
             // include DB
-            include_once('config.inc.php');
+            include('config.inc.php');
 
             $query = "SELECT idBOOK, BOOKtitle, AUTHORname, AUTHORsurname, BOOKyear, BOOKpublisher, BOOKpages, BOOKgenre, BOOKtoBorrow from BOOK b, WRITTEN w, AUTHOR a WHERE b.idBOOK = w.BOOK_idBOOK AND a.idAUTHOR = w.AUTHOR_idAUTHOR";
 
@@ -99,7 +100,7 @@ include('header.php'); ?>
             } else {
                 echo "<br> No results fetched. <br> Please, try again with different data.";
             }
-            $_SESSION['$idBOOK'] = $row['idBOOK'];
+
             mysqli_free_result($result);
             mysqli_close($conn);
         }
@@ -109,5 +110,3 @@ include('header.php'); ?>
 </body>
 
 </html>
-
-<?php include('footer.php'); ?>

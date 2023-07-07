@@ -7,23 +7,18 @@
 
     include('header.php');
 
-    echo ($_SESSION['idBOOK']);
-
     include_once('config.inc.php');
 
-    $iduser = 7;
-    /*
-    $idBOOK = 9;
-    */
-    $idBOOK = $_SESSION['idBOOK'];
+    // $iduser = 7;
+    $iduser = $_SESSION['idUSER'];
 
-    echo ("PROBA");
+    $idBOOK = $_GET['id'];
 
     $sql = "INSERT INTO 
-    RESERVATION (`RESisBooked`, `RESvalidity`, `USER_idUSER`, `BOOK_idBOOK`)
+    RESERVATION (RESisBooked, `RESvalidity`, `USER_idUSER`, `BOOK_idBOOK`)
     VALUES (TRUE, 2, '$iduser', '$idBOOK')";
 
-    echo ("PROBA 2");
+    echo ("You have successfully made a book reservation! ");
     $result = mysqli_query($conn, $sql)
         or die("Error: " . mysqli_error($conn));
 

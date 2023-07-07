@@ -13,6 +13,10 @@
     <link rel="stylesheet" type="text/css" href="styles/styles-index.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-header.css">
     <link rel="stylesheet" type="text/css" href="styles/styles-footer.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
     <script>
         function checkName() {
             var name = document.getElementById("name").value;
@@ -110,9 +114,55 @@
 </head>
 
 <body>
+    <caption>REGISTRATION FORM</caption>
+    <form class="row g-3" name="registration" id="registration" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+        <div class="col-md-5">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="col-md-5">
+            <label for="lastName" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email address is your USERNAME" required>
+        </div>
+        <!--
+            to see password and repeated password: 
+            type="text" instead of type="password"
+            return to the correct one once the app is complete
+        -->
+        <div class="col-md-2">
+            <label for="password" class="form-label">Password</label>
+            <input type="text" class="form-control" id="password" name="password" required>
+        </div>
+        <div class="col-md-2">
+            <label for="repPassword" class="form-label">Repeated password</label>
+            <input type="text" class="form-control" id="repPassword" name="repPassword" required>
+        </div>
+        <div class="col-md-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" name="city" required>
+        </div>
+        <div class="col-md-4">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address" required>
+        </div>
+        <div class="col-md-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
 
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" name="registration" value="REGISTER" onClick="checkData()">REGISTER</button>
+        </div>
+    </form>
+    <div id="message"></div>
+
+    <!--
     <fieldset style="width: 400px;">
-        <form name="registration" id="registration" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+        
             <caption>REGISTRATION FORM</caption>
             <br>
             Name:
@@ -127,11 +177,7 @@
             <br>
             <input type="email" name="email" id="email" required>
             <br>
-            <!--
-            to see password and repeated password: 
-            type="text" instead of type="password"
-            return to the correct one once the app is complete
-            -->
+
             Password:
             <br>
             <input type="text" name="password" id="password" required>
@@ -153,14 +199,14 @@
             <input type="text" name="phone" id="phone" required>
             <br>
             <br>
-            <!--<button onclick="checkData()" type="button" name="registration" value="Submit">SUBMIT</button> -->
+            <button onclick="checkData()" type="button" name="registration" value="Submit">SUBMIT</button> 
             <input type="submit" name="registration" value="SUBMIT" onClick="checkData()" />
         </form>
         <div id="message"></div>
     </fieldset>
+-->
 
 </body>
-
 
 <?php
 include_once('config.inc.php');
@@ -180,10 +226,8 @@ VALUES
 
 $result = mysqli_query($conn, $sql)
     or die("Error: " . mysqli_error($conn));
-
 ?>
 
 </html>
-
 
 <?php include('footer.php'); ?>
