@@ -33,23 +33,16 @@ if (mysqli_num_rows($result) > 0) {
     if ($user_db['USERpass'] == $pass) {
         $_SESSION['idUSER'] = $user_db['idUSER'];
         $_SESSION['USERemail'] = $user_db['USERemail'];
-        // $_SESSION['user'] = $user;
         $_SESSION['user_role'] = $user_role;
         if ($user_role == 'ADMIN') {
-            // $_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
-            // $_SESSION['USERemail'] = $user_db['USERemail'];
             header("Location:admin.php");
             exit();
         }
         if ($user_role == 'LIBRARIAN') {
-            // $_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
-            // $_SESSION['USERemail'] = $user_db['USERemail'];
             header("Location:librarian.php");
             exit();
         }
         if ($user_role == 'MEMBER') {
-            // $_SESSION['user'] = $user_db['USERname'] . " " . $user_db['USERsurname'];
-            // $_SESSION['USERemail'] = $user_db['USERemail'];
             header("Location:member.php");
             exit();
         }
