@@ -93,18 +93,16 @@ include('header.php');
                     echo "<td>{$row['BOOKpages']}</td>";
                     echo "<td>{$row['BOOKgenre']}</td>";
                     echo "<td>{$row['BOOKtoBorrow']}</td>";
-                    echo "<td><a href='reservation.php?id=" . $row['idBOOK'] . "'>RESERVATION</a></td>";
+                    echo "<td><a href='reservation.php?id=" . $row[' idBOOK'] . "'>RESERVATION</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";
             } else {
                 echo "<br> No results fetched. <br> Please, try again with different data.";
             }
-
             mysqli_free_result($result);
             mysqli_close($conn);
-        }
-        ?>
+        } ?>
     </div>
 
 </body>

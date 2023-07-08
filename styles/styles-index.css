@@ -1,6 +1,11 @@
 body {
     background-color: bisque;
     background-image: url("../images/PHP-LIB-bgr.jpg");
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
 }
 
 .title {

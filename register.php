@@ -90,6 +90,7 @@
         }
 
         function checkData() {
+            alert("PROVERA CHECK DATA")
             var message = "";
             if (!checkName())
                 message += "Please, insert name. ";
