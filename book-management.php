@@ -125,19 +125,19 @@ include('header.php');
             <form class="row g-3" name="book-reg" id="book-reg" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                 <div class="col-md-3">
                     <label for="title" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="title" name="title" required>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Book title" required>
                 </div>
                 <div class="col-md-3">
                     <label for="authorSurname" class="form-label">Author surname</label>
-                    <input type="text" class="form-control" id="authorSurname" name="authorSurname" required>
+                    <input type="text" class="form-control" id="authorSurname" name="authorSurname" placeholder="Author surname" required>
                 </div>
                 <div class="col-md-3">
                     <label for="authorName" class="form-label">Author name</label>
-                    <input type="text" class="form-control" id="authorName" name="authorName" required>
+                    <input type="text" class="form-control" id="authorName" name="authorName" placeholder="Author name" required>
                 </div>
                 <div class="col-md-3">
                     <label for="year" class="form-label">Publication year</label>
-                    <input type="number" class="form-control" id="year" name="year" required>
+                    <input type="number" class="form-control" id="year" name="year" placeholder="Publication year" required>
                 </div>
                 <div class="col-md-3">
                     <label for="publisher" class="form-label">Publisher</label>
@@ -145,7 +145,7 @@ include('header.php');
                 </div>
                 <div class="col-md-3">
                     <label for="nrpages" class="form-label">Nr of pages</label>
-                    <input type="number" class="form-control" id="nrpages" name="nrpages">
+                    <input type="number" class="form-control" id="nrpages" name="nrpages" placeholder="Nr of pages">
                 </div>
                 <div class="col-md-3">
                     <label for="isbn" class="form-label">ISBN</label>
@@ -153,23 +153,23 @@ include('header.php');
                 </div>
                 <div class="col-md-9">
                     <label for="description" class="form-label">Description</label>
-                    <input type="text" class="form-control" id="description" name="description">
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Description">
                 </div>
                 <div class="col-md-3">
                     <label for="genre" class="form-label">Genre</label>
-                    <input type="text" class="form-control" id="genre" name="genre">
+                    <input type="text" class="form-control" id="genre" name="genre" placeholder="Genre">
                 </div>
                 <div class="col-md-3">
                     <label for="borrow" class="form-label">To rent</label>
-                    <input type="text" class="form-control" id="borrow" name="borrow">
+                    <input type="text" class="form-control" id="borrow" name="borrow" placeholder="Can be taken: 1 YES, 0 NO">
                 </div>
                 <div class="col-md-3">
                     <label for="copies" class="form-label">Nr of copies</label>
-                    <input type="number" class="form-control" id="copies" name="copies" required>
+                    <input type="number" class="form-control" id="copies" name="copies" placeholder="Nr of copies" required>
                 </div>
                 <div class="col-md-3">
                     <label for="available" class="form-label">Available</label>
-                    <input type="text" class="form-control" id="available" name="available">
+                    <input type="text" class="form-control" id="available" name="available" placeholder="Available">
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary" name="book-reg" value="SUBMIT">SUBMIT</button>
