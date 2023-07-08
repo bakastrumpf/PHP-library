@@ -25,7 +25,7 @@ include('header.php');
 
     <ul class="nav nav-tabs" id="book-management" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="search-tab" data-bs-toggle="tab" data-bs-target="#search-tab-pane" type="button" role="tab" aria-controls="search-tab-pane" aria-selected="true">Search books</button>
+            <button class="nav-link active" id="search-tab" data-bs-toggle="tab" data-bs-target="#search-tab-pane" type="button" role="tab" aria-controls="search-tab-pane" aria-selected="false">Search books</button>
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="add-tab" data-bs-toggle="tab" data-bs-target="#add-tab-pane" type="button" role="tab" aria-controls="add-tab-pane" aria-selected="false">Add books</button>
