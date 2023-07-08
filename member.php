@@ -88,8 +88,6 @@ if ($_SESSION['user_role'] == 'LIBRARIAN') {
         </div>
     </div>
 
-
-
     <?php include('footer.php'); ?>
 </body>
 
