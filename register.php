@@ -119,13 +119,13 @@
     <form class="row g-3" name="registration" id="registration" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <div class="col-md-5">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
         </div>
         <div class="col-md-5">
             <label for="lastName" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" required>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Email address is your USERNAME" required>
         </div>
@@ -134,25 +134,25 @@
             type="text" instead of type="password"
             return to the correct one once the app is complete
         -->
-        <div class="col-md-2">
+        <div class="col-md-4">
             <label for="password" class="form-label">Password</label>
-            <input type="text" class="form-control" id="password" name="password" required>
+            <input type="text" class="form-control" id="password" name="password" placeholder="Small letter, capital letter, number, special character, etc." required>
         </div>
         <div class="col-md-2">
             <label for="repPassword" class="form-label">Repeated password</label>
-            <input type="text" class="form-control" id="repPassword" name="repPassword" required>
+            <input type="text" class="form-control" id="repPassword" name="repPassword" placeholder="Make sure passwords match" required>
         </div>
         <div class="col-md-3">
             <label for="city" class="form-label">City</label>
-            <input type="text" class="form-control" id="city" name="city" required>
+            <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
         </div>
         <div class="col-md-4">
             <label for="address" class="form-label">Address</label>
-            <input type="text" class="form-control" id="address" name="address" required>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
         </div>
         <div class="col-md-3">
             <label for="phone" class="form-label">Phone</label>
-            <input type="text" class="form-control" id="phone" name="phone" required>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number" required>
         </div>
 
         <div class="col-12">
