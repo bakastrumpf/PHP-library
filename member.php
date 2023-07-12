@@ -140,11 +140,11 @@ include_once('config.inc.php');
                     }
                     echo "</table>";
                 } else {
-                    echo "<br> No results fetched. 
+                    echo "<p><br> No results fetched. 
                     <br> You haven't been reading lately, have you? 
                     <br> How about browsing for books to see if you'd like something, 
                     <br> or heading to the library directly instead? 
-                    <br> So far, those are the best ways to populate this page with data :wink: ";
+                    <br> So far, those are the best ways to populate this page with data :wink: <br></p>";
                 }
                 mysqli_free_result($result);
                 mysqli_close($conn);
