@@ -26,11 +26,12 @@ include('header.php');
             <h3>SEARCH BOOKS</h3>
             <hr>
             <form name="search" id="search" method="GET" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                I am looking for:
+                <p>This page allows you to browse for books in our library. </p>
+                <p>If you look for:</p>
                 <input type="text" name="title" size="30" placeholder="book title" value="<?php if (isset($_GET['title'])) echo $_GET['title']; ?>" />
                 <br>
                 <br>
-                Results sorted:
+                <p>Results can be sorted:</p>
                 <select name="sort">
                     <option selected>ascending</option>
                     <option>descending</option>
